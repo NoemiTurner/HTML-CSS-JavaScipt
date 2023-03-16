@@ -8,7 +8,7 @@
 <!--Sources:
     https://www.w3schools.com/html/html_intro.asp
     https://www.khanacademy.org/computing/computer-programming/programming
- -->
+-->
 
 <!--Web Browsers
     The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML 
@@ -23,9 +23,13 @@
     1991 - Tim Berners-Lee invented HTML
 -->
 
+<!--lang Attribute: include the lang attribute inside the <html> tag to declare the language of the Web page.
+    This is meant to assist search engines and browsers.
+    Country codes can also be added to the language code in the lang attribute.
+-->
 
 <!DOCTYPE html> <!--declaration defines that this document is an HTML5 document-->
-<html> <!--element is the root element of an HTML page-->
+<html lang="en-US"> <!--element is the root element of an HTML page-->
 
 <head> <!--element contains meta information about the HTML page-->
 <title>Page Title</title> <!--element specifies a title for the HTML page (which is shown in the brower's title bar)-->
@@ -33,22 +37,44 @@
 
 <body> 
     <!--the body element defines the document's body, and is a container for all
-    the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.-->
+    the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+    -->
 
     <h1 style="background-color:#E2B0CE;"> My 90's School Locker <h1>
     <h1>My First Heading</h1> <!--defines a large heading-->
     
     <br>
 
+    <!--HTML tags are not case sensitive-->
+    <Br>
+
     <p>My first paragraph.</p> <!--defines a paragraph-->
     <p>This is another paragraph.</p>
 
-    <h1>This is heading 1</h1>
-    <h2>This is heading 2</h2>
+    <!--Headings are important:
+        Search engines use the headings to index the structure and content of your web pages.
+        Note: Use HTML headings for headings only. Do not use headings to make text big or bold
+    -->
+    <h1>This is heading 1</h1>  <!--Should be used for main headings-->
+    <h2>This is heading 2</h2> <!--Should be used for headings-->
     <h3>This is heading 3</h3>
     <h4>This is heading 4</h4>
     <h5>This is heading 5</h5>
     <h6>This is heading 6</h6>
+
+    <!--Bigger Headings:
+        Each HTML heading has a default size. However, you can specify the size for any heading
+        with the style attribute, using the CSS font-size property
+    -->
+    <h1 style="font-size:60px;">Heading 1</h1>
+
+
+    <!--HTML Attributes:
+        All HTML elements can have attribrutes
+        Attributes provide additional information about elements
+        Attributes are always specified in the start tag
+        Attributes usually come in name/value pairs like: name="value"
+    -->
 
     <!--HTML links are defined with the <a> tag-->
     <!--The link's destination is specified by the href attribute.-->
@@ -56,9 +82,33 @@
     <a href="https://www.google.com/"> This is a link</a>
 
     <!--HTML Images are definied with the <img> tag.
-    The source file (src), alternative text (alt), width, 
-    and height are provided as attributes-->
-    <img src="mcEscherQuote.jpg" alt="A photo of a quote by MC Escher that is on a wall of an art gallery exhibit" width="104" height="142">
+        The source file (src), alternative text (alt), width, 
+        and height are provided as attributes.
+
+        The src attibute specifies the path to the image to be displayed.
+        There are two ways to specifiy the URL in the src attribute:
+        1. Absolute URL - Links to an external image that is hosted on another website
+        2. Relative URL - Links to an image that is hosted within the website.
+            * If the URL begins without a slash, it will be relative to the current page
+            * If the URL begins with a slash, it will be relative to the domain
+            Note: It is usually better to use relative URLs because they will not break if you change domain. 
+    -->
+    <img src="mcEscherQuote.jpg" alt="A photo of a quote by MC Escher that is on a wall of an art gallery exhibit" width="600" height="500">
+
+    <!--The style attribute is used to add styles to an element such as color, font, size, and more-->
+    <p style="color:green;">This is a green paragraph.</p>
+
+    <!--The title attribute defines some extra information about an element
+        The value of the title attribute will be displayed as a tooltip when you
+        mouse over the element
+    -->
+    <p title="I'm a tooltip" style="color:pink;">This is a pink paragraph</p>
+
+    <!--W3Schools suggestions: 
+        - Always use lowercase attribute names
+        - Always quote attribute values
+        - Double quotes around attribute values are most common in HTML, but single quotes can also be used. 
+    -->
 
 </body>
 </html> <!--this is an end tag-->
